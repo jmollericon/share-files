@@ -15,9 +15,12 @@
     "generate-bundle-release": "yarn clean-project && yarn compile-app && cd android && ./gradlew bundleRelease && cd .."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.10",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-device-info": "^9.0.2",
+    "react-native-safe-area-context": "^4.3.1",
+    "react-native-screens": "^3.13.1",
     "react-native-vision-camera": "^2.13.3"
   },
   "devDependencies": {
