@@ -28,17 +28,12 @@ const Home = ({navigation}: any) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => goTo('TakeSnapshot')}>
-          <Text>Take Snapshot</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => goTo('TakeSnapshot')}>
+          onPress={() => goTo('RecordVideo')}>
           <Text>Record Video</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => goTo('TakeSnapshot')}>
+          onPress={() => goTo('RecordVideo')}>
           <Text>Record Audio</Text>
         </TouchableOpacity>
       </View>
