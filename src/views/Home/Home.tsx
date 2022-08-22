@@ -23,24 +23,29 @@ const Home = ({navigation}: any) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => goTo('BandwidthSpeed')}>
+          <Text>Bandwidth-speed</Text>
+        </TouchableOpacity>
+        {/* <TouchableOpacity
+          style={styles.button}
           onPress={() => goTo('TakePhoto')}>
           <Text>Take Photo</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={() => goTo('TakeSnapshot')}>
           <Text>Take Snapshot</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={() => goTo('TakeSnapshot')}>
           <Text>Record Video</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={() => goTo('TakeSnapshot')}>
           <Text>Record Audio</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </ScrollView>
   );
