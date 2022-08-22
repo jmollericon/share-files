@@ -1,12 +1,9 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Camera, useCameraDevices} from 'react-native-vision-camera';
-
-import images from '../../constants/images';
 
 const RecordVideo = () => {
   const [cameraStatus, setCameraStatus] = useState(true);
-  const [newPhoto, setPhotoPath] = useState(images.defaultImage);
   const devices = useCameraDevices('wide-angle-camera');
   const device = devices.back;
 
@@ -59,7 +56,6 @@ const RecordVideo = () => {
     //setPhotoPath({uri: 'file://' + photo?.path});
   };
 
-
   return (
     <View style={styles.container}>
       <View style={styles.cameraContainer}>
@@ -68,8 +64,8 @@ const RecordVideo = () => {
           style={styles.camera}
           device={device}
           isActive={true}
-          preset="medium"
-          fps={240}
+          //preset="medium"
+          //fps={240}
           video={true}
           audio={true}
         />
@@ -78,7 +74,6 @@ const RecordVideo = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.secondConatiner}>
-        <Image style={styles.tinyLogo} source={newPhoto} />
         <TouchableOpacity style={styles.buttonSend} onPress={() => {}}>
           <Text style={styles.center}>Send Photo</Text>
         </TouchableOpacity>
@@ -137,6 +132,13 @@ const styles = StyleSheet.create({
   photoContainer: {
     flex: 1,
     backgroundColor: '#260095',
+  },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
   },
 });
 

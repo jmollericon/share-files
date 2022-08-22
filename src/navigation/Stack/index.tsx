@@ -5,6 +5,7 @@ import Home from '../../views/Home';
 import DeviceInfo from '../../views/DeviceInfo';
 import TakePhoto from '../../views/TakePhoto';
 import RecordVideo from '../../views/RecordVideo';
+import VideoPlayer from '../../views/VideoPlayer';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const StackNavigator = () => {
       <Stack.Screen name="DeviceInfo" component={DeviceInfo} />
       <Stack.Screen name="TakePhoto" component={TakePhoto} />
       <Stack.Screen name="RecordVideo" component={RecordVideo} />
+      <Stack.Screen name="VideoPlayer" component={VideoPlayer} />
     </Stack.Navigator>
   );
 };
