@@ -6,6 +6,7 @@ import Home from '../../views/Home';
 import DeviceInfo from '../../views/DeviceInfo';
 import TakePhoto from '../../views/TakePhoto';
 import BandwidthSpeed from '../../views/BandwidthSpeed';
+import NetworkInfo from '../../views/NetworkInfo';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ const StackNavigator = () => {
       <Stack.Screen name="TakePhoto" component={TakePhoto} />
       <Stack.Screen name="TakeSnapshot" component={HomeScreen} />
       <Stack.Screen name="BandwidthSpeed" component={BandwidthSpeed} />
+      <Stack.Screen name="NetworkInfo" component={NetworkInfo} />
     </Stack.Navigator>
   );
 };

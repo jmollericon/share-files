@@ -26,6 +26,11 @@ const Home = ({navigation}: any) => {
           onPress={() => goTo('BandwidthSpeed')}>
           <Text>Bandwidth-speed</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => goTo('NetworkInfo')}>
+          <Text>Network Info</Text>
+        </TouchableOpacity>
         {/* <TouchableOpacity
           style={styles.button}
           onPress={() => goTo('TakePhoto')}>
