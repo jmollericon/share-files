@@ -34,8 +34,18 @@ const measureConnectionSpeed = (imageURIParam: any): any => {
 const getNetworkBandwidth = async (): Promise<void> => {
   console.log('getNetworkBandwidth');
   try {
-    const networkSpeed = await measureConnectionSpeed(null);
-    console.log({networkSpeed}); // Network bandwidth speed, Mbps
+    const speeds = [];
+    const counter = 5;
+
+    for (let i = 0; i < counter; i++) {
+      const networkSpeed = await measureConnectionSpeed(null);
+      speeds.push(networkSpeed.speed);
+      console.log({networkSpeed}); // Network bandwidth speed, Mbps
+    }
+
+    const sum = speeds.reduce((a, b) => a + b);
+    const average_speed = sum / counter;
+    console.log('average_speed', average_speed, 'Mbps');
   } catch (err) {
     console.log(err);
   }
